@@ -1,7 +1,7 @@
 noseX=0;
 noseY=0;
 function preload(){
-    oculos = loadImage('oculos.webp');
+    oculos = loadImage('https://i.postimg.cc/QCc3QmrS/oculos.png');
 }
     function setup(){
     canvas = createCanvas(300, 300);
@@ -11,7 +11,7 @@ function preload(){
     video.hide();
     poseNet = ml5.poseNet(video, modelLoaded);
     poseNet.on('pose', gotPoses);}
-    function modedlLoaded(){
+    function modelLoaded(){
         console.log('pão de queijo');
     }
     function gotPoses(results){
@@ -23,7 +23,7 @@ function preload(){
     }
 function draw(){
     image(video, 0, 0, 300, 300);
-    image(oculos, noseX, noseY, 30, 30);
+    image(oculos, noseX, noseY, 100, 100);
 }
 function take_snapshot(){
     save('a foto com filtro.png');
